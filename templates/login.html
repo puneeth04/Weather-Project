@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Enter details to login</h1>
+    <form action="/login" method="post">
+        <p> Login Here</p>
+        <p>
+            <label for="username">Username</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </p>
+        <p>
+            <input type="submit" value="Log In">
+        </p>
+    </form>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+</body>
+</html>

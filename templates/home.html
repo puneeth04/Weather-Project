@@ -3,6 +3,20 @@
 		<title>weather request </title>
 	</head>
 	<body>
-		<h1>welcome to view weather info</h1>
+		<h1> select a operation to proceed </h1>
+		{% if message %}
+        <p>{{ message }}</p>
+		{% endif %}
+		
+		<form id="form1" action="/operation" method="POST" enctype="multipart/form-data">
+			<select id="Select" name = "operation">
+			  <option value="create">create</option>
+			  <option value="update">update</option>
+			  <option value="delete">delete</option>
+			  <option value="data">insert</option>
+			</select>
+			<input type="submit" value="Submit">
+		</form>
+
 	</body>
 </html>
